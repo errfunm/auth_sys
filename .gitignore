@@ -2,3 +2,7 @@
 *__pycache__
 */migrations/
 !*/migrations/__init__.py
+doc.txt
+
+# IDE
+.idea
