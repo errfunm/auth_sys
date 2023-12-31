@@ -6,3 +6,6 @@ doc.txt
 
 # IDE
 .idea
+
+#sqlite3
+db.sqlite3
