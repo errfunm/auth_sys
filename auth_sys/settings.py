@@ -123,3 +123,6 @@ AUTH_USER_MODEL = 'core.User'
 AUTHENTICATION_BACKENDS = [
     'core.backends.CustomizedBackend',
 ]
+
+# Email settings
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

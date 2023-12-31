@@ -6,7 +6,7 @@ import random
 # customized User model
 class User(AbstractUser):
     id = models.CharField(max_length=8, primary_key=True, editable=False)
-
+    is_2fa_enabled =  models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
         if not self.id:
@@ -17,6 +17,6 @@ class User(AbstractUser):
         username = self.username
         current_time = timezone.now().strftime('%Y%m%d%H%M%S')
         sample = f"{username[:4]}{current_time[-4:]}"
-        rand_sample = random.sample(sample, k=8)
+        rand_sample = random.sample(sample, k=len(sample))
         unique_id = ''.join(rand_sample)
         self.id = unique_id

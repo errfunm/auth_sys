@@ -4,6 +4,7 @@
 
 <form method="post" action="">
     {% csrf_token %}
-    {{ form.as_p}}
-    <button type="submit"> Log in</button>
+    <label>OTP: </label>
+    <input type="text" name="otp">
+    <button type="submit" value="confirm">Confirm</button>
 </form>
